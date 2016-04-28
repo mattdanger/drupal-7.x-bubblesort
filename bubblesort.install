@@ -1,0 +1,16 @@
+<?php
+
+/**
+ * @file 
+ * bubblesort.install
+ */
+
+/**
+ * Remove variables on uninstall.
+ */
+function bubblesort_uninstall() {
+
+  db_query("DELETE FROM {variable} WHERE name LIKE 'bubblesort_%'");
+  cache_clear_all('variables', 'cache');
+
+}

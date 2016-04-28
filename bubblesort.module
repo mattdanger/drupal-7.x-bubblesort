@@ -1,0 +1,78 @@
+<?php
+
+/**
+ * @file
+ * bubblesort.module
+ */
+
+define('BUBBLESORT_SET_SIZE', 10);
+define('BUBBLESORT_MIN', 0);
+define('BUBBLESORT_MAX', 100);
+
+include_once('includes/bubblesort.inc');
+
+/**
+ * Implements hook_menu().
+ */
+function bubblesort_menu() {
+
+  $items = array();
+  $items['bubblesort'] = array(
+    'title' => 'Bubble Sort Simulator',
+    'page callback' => 'bubblesort_page',
+    'page arguments' => array(),
+    'access arguments' => array('access content'),
+    'file' => 'includes/bubblesort.pages.inc',
+  );
+  $items['admin/config/administration/bubblesort'] = array(
+    'title' => 'Administer Bubblesort',
+    'description' => 'Configure settings for Bubblesort.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('bubblesort_settings_form'),
+    'access arguments' => array('administer bubblesort'),
+    'file' => 'includes/bubblesort.admin.inc',
+  );
+
+  return $items;
+
+}
+
+/**
+ * Implements hook_permission().
+ */
+function bubblesort_permission() {
+
+  $permissions = array();
+  $permissions['administer bubblesort'] = array(
+    'title' => t('Administer Bubblesort'),
+  );
+
+  return $permissions;
+
+}
+
+/**
+ * Implements hook_theme()
+ */
+function bubblesort_theme() {
+
+  $items = array();
+  $items['bubblesort_view'] = array(
+    'variables' => array(
+      'set' => array(),
+      'pos' => 0,
+      'complete' => 0,
+    ),
+    'template' => 'theme/bubblesort-view',
+  );
+
+  return $items;
+
+}
+
+/**
+ * Implements hook_init().
+ */
+function bubblesort_init() {
+  drupal_add_css(drupal_get_path('module', 'bubblesort') . '/bubblesort.css');
+}

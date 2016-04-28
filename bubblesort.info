@@ -1,0 +1,6 @@
+name = Bubble Sort
+description = "Simulate the bubble sort algorithm"
+author = Matt West <matt@mattdanger.net>
+version = 7.x-1.0
+core = 7.x
+configure = admin/config/bubblesort
