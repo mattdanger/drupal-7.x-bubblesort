@@ -17,7 +17,7 @@ Enable module in the Drupal module administration panel, see http://drupal.org/n
 
 ## Configuration
 
-Configure in Administration » Configuration » Administer Bubblesort:
+Configure in Administration » Configuration » Administer Bubblesort
 
 
 ## Contact
