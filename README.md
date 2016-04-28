@@ -11,9 +11,9 @@ Drupal 7.x
 
 ## Installation
 
-Install as usual, see http://drupal.org/node/895232 for further information.
+Clone this repository into Drupal's modules directory: `cd sites/all/modules && git clone git@github.com:mattdanger/drupal-bubblesort.git bubblesort`
 
-Drush snippet: `drush en -y bubblesort`
+Enable module in the Drupal module administration panel, see http://drupal.org/node/895232, or use this Drush snippet: `drush en -y bubblesort`
 
 ## Configuration
 
