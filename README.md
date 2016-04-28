@@ -2,7 +2,7 @@
 
 ## Summary
 
-This simple module simulates the bubble sort algorithm
+This simple Drupal 7 module that simulates the bubble sort algorithm.
 
 ## Requirements
 
