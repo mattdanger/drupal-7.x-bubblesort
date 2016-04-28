@@ -1,23 +1,24 @@
+# drupal-bubblesort
 
--- SUMMARY --
+## Summary
 
 This simple module simulates the bubble sort algorithm
 
--- REQUIREMENTS --
+## Requirements
 
 None.
 
 
--- INSTALLATION --
+## Installation
 
 Install as usual, see http://drupal.org/node/895232 for further information.
 
 
--- CONFIGURATION --
+## Configuration
 
 Configure in Administration » Configuration » Administer Bubblesort:
 
 
--- CONTACT --
+## Contact
 
 Matt West <matt@mattdanger.net>

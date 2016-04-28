@@ -23,15 +23,24 @@
   <?php if (!$complete): ?><p>Click "Step" above to walk through the sorting item-by-item.</p><?php endif; ?>
 
   <table class="bubblesort">
+    <thead>
+      <th>Position</th>
+      <th>Value</th>
+      <th width="100%"></th>
+    </thead>
   <?php for ($i = 0; $i < count($set); $i++): ?>
     <tr>
+      <td>
+        <?php print $i; ?>
+      </td>
+      <td>
+        <?php print $set[$i]; ?>
+      </td>
       <td>
         <span 
           style="width: <?php print $set[$i]; ?>%" 
           <?php if (!$complete && (($pos == $i) || ($pos+1 == $i))): ?>class="active"<?php endif; ?>
         ></span>
-        &nbsp;   <?php print $set[$i]; ?>
-        
       </td>
     </tr>
   <?php endfor; ?>

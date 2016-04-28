@@ -1,7 +1,7 @@
 table.bubblesort span {
   background-color: #ccc;
   display: inline-block;
-  padding: 5px;
+  padding: 5px 1px;
 }
 table.bubblesort span.active {
   background-color: red;
